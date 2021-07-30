@@ -1,5 +1,5 @@
 body {
-  margin: 0px;
+  margin: 0;
   font-family: 'Quicksand', sans-serif;
 }
 
@@ -9,23 +9,23 @@ body {
           align-items: center;
   background-color: #21c08b;
   color: white;
-  height: 100px;
-  width: 100%;
-  top: 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 100px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  top: 0px;
+  width: 100%;
 }
 
 .header__img {
-  width: 200px;
   margin-left: 30px;
+  width: 200px;
 }
 
-.register {
+.login {
   background: -webkit-gradient(linear, left top, left bottom, from(#21C08B), to(#AB88FF));
   background: linear-gradient(#21C08B, #AB88FF);
   display: -webkit-box;
@@ -41,11 +41,11 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 0px 30px;
   min-height: calc(100vh - 200px);
-  padding: 0 20px;
 }
 
-.register__container {
+.login__container {
   background-color: rgba(255, 255, 255, 0.1);
   border: 5px solid white;
   border-radius: 50px;
@@ -56,15 +56,15 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
 }
 
-.register__container--form {
+.login__container--form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -72,6 +72,65 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.login__container--form label {
+  font-size: 14px;
+}
+
+.login__container--remember-me {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+}
+
+.login__container--remember-me a {
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.login__container--remember-me a:hover {
+  text-decoration: underline;
+}
+
+.login__container--social-media > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.login__container--social-media > div > img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.login__container--register {
+  font-size: 14px;
+}
+
+.login__container--register a {
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.login__container--register a:hover {
+  text-decoration: underline;
 }
 
 .input {
@@ -119,27 +178,6 @@ body {
   margin: 10px 0px;
 }
 
-.register__container--iniciar-sesion {
-  font-size: 14px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.register__container--iniciar-sesion a {
-  font-size: 16px;
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.register__container--iniciar-sesion a:hover {
-  text-decoration: underline;
-}
-
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -162,6 +200,23 @@ body {
 
 .footer a:hover {
   text-decoration: underline;
-  font-weight: bold;
 }
-/*# sourceMappingURL=registro.css.map */
+
+@media only screen and (max-width: 600px) {
+  .login__container {
+    background-color: transparent;
+    border: none;
+    padding: 0px;
+    width: 100%;
+  }
+  .footer {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+/*# sourceMappingURL=iniciar-sesion.css.map */
